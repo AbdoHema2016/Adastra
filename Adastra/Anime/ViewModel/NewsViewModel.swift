@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 class NewsViewModel: ViewModel {
-    var articles: [News] = []
+    var articles: [Article] = []
     func getNews(onSuccess: (() -> Void)?, onFailure: ((String) -> Void)?) {
     
 
@@ -17,10 +17,11 @@ class NewsViewModel: ViewModel {
         
         let request = AnimeNewsRequest(url: APIs.News.path)
         let aPIFetcher = APIFetcher()
-        aPIFetcher.fetch(request: request, mappingInResponse: BaseResponse<News>.self, onSuccess: { (response) in
+        aPIFetcher.fetch(request: request, mappingInResponse: BaseResponse<Article>.self, onSuccess: { (response) in
             if let article = response.articles {
-                self.articles = article
-                
+                //self.articles = article
+                self.articles.append(contentsOf: article)
+
                 onSuccess?()
             } else {
                onFailure?("Error")
