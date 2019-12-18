@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,13 @@
 		947FCE5E23AA613000671D8E /* NibLoadable+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947FCE5D23AA613000671D8E /* NibLoadable+Reusable.swift */; };
 		947FCE6523AA61CB00671D8E /* UICollectionViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947FCE6123AA61CB00671D8E /* UICollectionViewCellExtension.swift */; };
 		947FCE6723AA61CB00671D8E /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947FCE6323AA61CB00671D8E /* UICollectionViewExtension.swift */; };
+		947FCE7323AA626000671D8E /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947FCE6B23AA626000671D8E /* BaseResponse.swift */; };
+		947FCE7423AA626000671D8E /* NetworkProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947FCE6D23AA626000671D8E /* NetworkProtocols.swift */; };
+		947FCE7523AA626000671D8E /* AlamofireExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947FCE6E23AA626000671D8E /* AlamofireExtensions.swift */; };
+		947FCE7623AA626000671D8E /* APIFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947FCE6F23AA626000671D8E /* APIFetcher.swift */; };
+		947FCE7723AA626000671D8E /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947FCE7023AA626000671D8E /* CustomError.swift */; };
+		947FCE7823AA626000671D8E /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947FCE7223AA626000671D8E /* BaseRequest.swift */; };
+		9D77DA3AAA2AE88A797530F8 /* Pods_Adastra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF29E33E3F17B1A1209C8CC7 /* Pods_Adastra.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +41,15 @@
 		947FCE5D23AA613000671D8E /* NibLoadable+Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NibLoadable+Reusable.swift"; sourceTree = "<group>"; };
 		947FCE6123AA61CB00671D8E /* UICollectionViewCellExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewCellExtension.swift; sourceTree = "<group>"; };
 		947FCE6323AA61CB00671D8E /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
+		947FCE6B23AA626000671D8E /* BaseResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
+		947FCE6D23AA626000671D8E /* NetworkProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkProtocols.swift; sourceTree = "<group>"; };
+		947FCE6E23AA626000671D8E /* AlamofireExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireExtensions.swift; sourceTree = "<group>"; };
+		947FCE6F23AA626000671D8E /* APIFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIFetcher.swift; sourceTree = "<group>"; };
+		947FCE7023AA626000671D8E /* CustomError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
+		947FCE7223AA626000671D8E /* BaseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
+		AF29E33E3F17B1A1209C8CC7 /* Pods_Adastra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Adastra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF59BF84E1762B442BAE0E97 /* Pods-Adastra.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Adastra.release.xcconfig"; path = "Target Support Files/Pods-Adastra/Pods-Adastra.release.xcconfig"; sourceTree = "<group>"; };
+		F9EA540FEA090F91947BB400 /* Pods-Adastra.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Adastra.debug.xcconfig"; path = "Target Support Files/Pods-Adastra/Pods-Adastra.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +57,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D77DA3AAA2AE88A797530F8 /* Pods_Adastra.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D7A3A4666E6F50CDC4351F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF29E33E3F17B1A1209C8CC7 /* Pods_Adastra.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		947FCE3723AA5EEA00671D8E = {
 			isa = PBXGroup;
 			children = (
 				947FCE4223AA5EEB00671D8E /* Adastra */,
 				947FCE4123AA5EEB00671D8E /* Products */,
+				B43561A8118A0DFDA63D9E83 /* Pods */,
+				2D7A3A4666E6F50CDC4351F1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,6 +93,7 @@
 		947FCE4223AA5EEB00671D8E /* Adastra */ = {
 			isa = PBXGroup;
 			children = (
+				947FCE6923AA626000671D8E /* Network Layer */,
 				947FCE5F23AA617D00671D8E /* Helpers */,
 				947FCE4323AA5EEB00671D8E /* AppDelegate.swift */,
 				947FCE4523AA5EEB00671D8E /* ViewController.swift */,
@@ -114,6 +142,52 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		947FCE6923AA626000671D8E /* Network Layer */ = {
+			isa = PBXGroup;
+			children = (
+				947FCE6A23AA626000671D8E /* Response */,
+				947FCE6C23AA626000671D8E /* Service Manager */,
+				947FCE7123AA626000671D8E /* Request */,
+			);
+			path = "Network Layer";
+			sourceTree = "<group>";
+		};
+		947FCE6A23AA626000671D8E /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				947FCE6B23AA626000671D8E /* BaseResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		947FCE6C23AA626000671D8E /* Service Manager */ = {
+			isa = PBXGroup;
+			children = (
+				947FCE6D23AA626000671D8E /* NetworkProtocols.swift */,
+				947FCE6E23AA626000671D8E /* AlamofireExtensions.swift */,
+				947FCE6F23AA626000671D8E /* APIFetcher.swift */,
+				947FCE7023AA626000671D8E /* CustomError.swift */,
+			);
+			path = "Service Manager";
+			sourceTree = "<group>";
+		};
+		947FCE7123AA626000671D8E /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				947FCE7223AA626000671D8E /* BaseRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		B43561A8118A0DFDA63D9E83 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F9EA540FEA090F91947BB400 /* Pods-Adastra.debug.xcconfig */,
+				BF59BF84E1762B442BAE0E97 /* Pods-Adastra.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -121,9 +195,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 947FCE5223AA5EEC00671D8E /* Build configuration list for PBXNativeTarget "Adastra" */;
 			buildPhases = (
+				636417762357C574F1FADE8D /* [CP] Check Pods Manifest.lock */,
 				947FCE3C23AA5EEB00671D8E /* Sources */,
 				947FCE3D23AA5EEB00671D8E /* Frameworks */,
 				947FCE3E23AA5EEB00671D8E /* Resources */,
+				E29AD8359B21F2EA86AAE693 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -180,16 +256,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		636417762357C574F1FADE8D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Adastra-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E29AD8359B21F2EA86AAE693 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Adastra/Pods-Adastra-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Adastra/Pods-Adastra-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Adastra/Pods-Adastra-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		947FCE3C23AA5EEB00671D8E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				947FCE7523AA626000671D8E /* AlamofireExtensions.swift in Sources */,
+				947FCE7323AA626000671D8E /* BaseResponse.swift in Sources */,
+				947FCE7723AA626000671D8E /* CustomError.swift in Sources */,
+				947FCE7623AA626000671D8E /* APIFetcher.swift in Sources */,
 				947FCE5923AA60FC00671D8E /* Model.swift in Sources */,
 				947FCE5B23AA60FC00671D8E /* BaseCollectionReusableView.swift in Sources */,
 				947FCE6523AA61CB00671D8E /* UICollectionViewCellExtension.swift in Sources */,
+				947FCE7423AA626000671D8E /* NetworkProtocols.swift in Sources */,
 				947FCE6723AA61CB00671D8E /* UICollectionViewExtension.swift in Sources */,
 				947FCE5A23AA60FC00671D8E /* BaseCollectionViewCell.swift in Sources */,
+				947FCE7823AA626000671D8E /* BaseRequest.swift in Sources */,
 				947FCE4623AA5EEB00671D8E /* ViewController.swift in Sources */,
 				947FCE5E23AA613000671D8E /* NibLoadable+Reusable.swift in Sources */,
 				947FCE4423AA5EEB00671D8E /* AppDelegate.swift in Sources */,
@@ -336,9 +460,11 @@
 		};
 		947FCE5323AA5EEC00671D8E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9EA540FEA090F91947BB400 /* Pods-Adastra.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Adastra/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -353,9 +479,11 @@
 		};
 		947FCE5423AA5EEC00671D8E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF59BF84E1762B442BAE0E97 /* Pods-Adastra.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Adastra/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
