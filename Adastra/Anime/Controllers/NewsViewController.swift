@@ -50,8 +50,17 @@ class NewsViewController: BaseViewController {
     }
     func openArticle(article: Article){
         print(article.intro)
-        let detailsViewController = DetailsViewController()
+       
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let detailsViewController = storyBoard.instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
+        detailsViewController.authorTitle = article.author_name
+        detailsViewController.atricleUrl = article.url
+        detailsViewController.articleTitle = article.title
+        detailsViewController.imgurl = article.image_url
+        detailsViewController.date = article.date
+        detailsViewController.intro = article.intro
         self.navigationController?.pushViewController(detailsViewController, animated: true)
+
     }
 
     
@@ -75,6 +84,9 @@ extension NewsViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.openArticle(article: newsViewModel.articles[indexPath.row])
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
     }
     
     

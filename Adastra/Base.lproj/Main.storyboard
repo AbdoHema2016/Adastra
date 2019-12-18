@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="X1A-pB-oeF">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,11 +15,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="NewsViewController" customModule="Adastra" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UHI-fs-nER">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DkI-om-O6g">
                                     <size key="itemSize" width="50" height="50"/>
@@ -53,43 +53,47 @@
             <objects>
                 <viewController storyboardIdentifier="DetailsViewController" id="euT-Z8-WIK" customClass="DetailsViewController" customModule="Adastra" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fwR-VH-ak4">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="P4g-HD-leo">
-                                <rect key="frame" x="0.0" y="20" width="375" height="296"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="296"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="296" id="ib2-5F-Twj"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aga-dF-DdA">
-                                <rect key="frame" x="8" y="324" width="359" height="20.5"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <rect key="frame" x="8" y="324" width="398" height="19.333333333333314"/>
+                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="intro" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bzy-HJ-Syc">
-                                <rect key="frame" x="8" y="374" width="359" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bzy-HJ-Syc">
+                                <rect key="frame" x="8" y="378.66666666666669" width="398" height="19.333333333333314"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YtH-RE-eTP">
-                                <rect key="frame" x="8" y="352.5" width="359" height="13.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <rect key="frame" x="8" y="351.33333333333331" width="398" height="19.333333333333314"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxi-vM-mqw">
-                                <rect key="frame" x="159" y="617" width="200" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxi-vM-mqw">
+                                <rect key="frame" x="8" y="618.66666666666663" width="200" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="0X3-aS-Wk9"/>
+                                    <constraint firstAttribute="width" constant="200" id="jul-xE-qUc"/>
                                 </constraints>
                                 <state key="normal" title="Read the Entire Article"/>
+                                <connections>
+                                    <action selector="btnOpenArticle:" destination="euT-Z8-WIK" eventType="touchUpInside" id="nIP-Bc-LIu"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="intro" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yc6-k6-a0w">
-                                <rect key="frame" x="8" y="399" width="359" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yc6-k6-a0w">
+                                <rect key="frame" x="8" y="406.00000000000006" width="398" height="212.66666666666669"/>
+                                <mutableString key="text">intro intro intro intro intro introintro intro intro intro intro introintro intro intro intro intro introintro intro intro intro intro introintro intro intro intro intro introaintro intro intro intro intro introintro intro intro intro intro introintro intro intro intro intro introintro intro intro intro intro introintro intro intro intro intro introaintro intro intro intro intro introintro intro intro intro intro introintro intro intro intro intro introintro intro intro intro intro introintro intro intro intro intro introav</mutableString>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -97,15 +101,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="rSq-DL-efA" firstAttribute="trailing" secondItem="Yc6-k6-a0w" secondAttribute="trailing" constant="8" id="42h-3i-eD9"/>
-                            <constraint firstItem="rSq-DL-efA" firstAttribute="bottom" secondItem="dxi-vM-mqw" secondAttribute="bottom" constant="20" id="6br-Vo-F5w"/>
                             <constraint firstItem="YtH-RE-eTP" firstAttribute="leading" secondItem="rSq-DL-efA" secondAttribute="leading" constant="8" id="6ie-MQ-KC5"/>
                             <constraint firstItem="P4g-HD-leo" firstAttribute="trailing" secondItem="rSq-DL-efA" secondAttribute="trailing" id="G7O-ZE-w6L"/>
                             <constraint firstItem="Yc6-k6-a0w" firstAttribute="leading" secondItem="rSq-DL-efA" secondAttribute="leading" constant="8" id="HZ6-gV-Xwi"/>
                             <constraint firstItem="P4g-HD-leo" firstAttribute="top" secondItem="rSq-DL-efA" secondAttribute="top" id="J9w-vQ-zMC"/>
                             <constraint firstItem="aga-dF-DdA" firstAttribute="top" secondItem="P4g-HD-leo" secondAttribute="bottom" constant="8" id="JDc-9V-q41"/>
-                            <constraint firstItem="rSq-DL-efA" firstAttribute="trailing" secondItem="dxi-vM-mqw" secondAttribute="trailing" constant="16" id="M5L-wU-4aB"/>
                             <constraint firstItem="rSq-DL-efA" firstAttribute="trailing" secondItem="Bzy-HJ-Syc" secondAttribute="trailing" constant="8" id="MZf-1J-hcJ"/>
                             <constraint firstItem="aga-dF-DdA" firstAttribute="leading" secondItem="rSq-DL-efA" secondAttribute="leading" constant="8" id="V4a-kq-KQh"/>
+                            <constraint firstItem="dxi-vM-mqw" firstAttribute="top" secondItem="Yc6-k6-a0w" secondAttribute="bottom" id="avA-KW-Tf5"/>
+                            <constraint firstItem="dxi-vM-mqw" firstAttribute="leading" secondItem="rSq-DL-efA" secondAttribute="leading" constant="8" id="dCC-9G-fyw"/>
                             <constraint firstItem="rSq-DL-efA" firstAttribute="trailing" secondItem="YtH-RE-eTP" secondAttribute="trailing" constant="8" id="dSm-up-52e"/>
                             <constraint firstItem="Bzy-HJ-Syc" firstAttribute="top" secondItem="YtH-RE-eTP" secondAttribute="bottom" constant="8" id="eYb-4I-iY1"/>
                             <constraint firstItem="Yc6-k6-a0w" firstAttribute="top" secondItem="Bzy-HJ-Syc" secondAttribute="bottom" constant="8" id="lwC-Dh-V1K"/>
@@ -121,7 +125,7 @@
                         <outlet property="imgArticleImage" destination="P4g-HD-leo" id="k4U-Sm-Sgq"/>
                         <outlet property="lblAuthor" destination="Bzy-HJ-Syc" id="vPb-9F-3i0"/>
                         <outlet property="lblDate" destination="YtH-RE-eTP" id="oiQ-G4-Pv0"/>
-                        <outlet property="lblIntro" destination="Bzy-HJ-Syc" id="JeC-E2-8aX"/>
+                        <outlet property="lblIntro" destination="Yc6-k6-a0w" id="YE7-jV-B81"/>
                         <outlet property="lblTitle" destination="aga-dF-DdA" id="I48-cY-RzC"/>
                     </connections>
                 </viewController>
@@ -135,8 +139,9 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="X1A-pB-oeF" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3zE-jh-K93">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.2265663743019104" green="0.67837393283843994" blue="0.98536175489425659" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
