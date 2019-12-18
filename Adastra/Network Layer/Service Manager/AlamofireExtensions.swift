@@ -49,14 +49,7 @@ extension DataRequest {
 //                    debug(response.request?.httpBody ?? "")
 //                    debug(response.request?.httpMethod ?? "")
                     
-                    if (decodedObject.status ?? -1) != -1 {
-                        // Response returned sucessfully
-                        completionHandler(DataResponse(request: response.request, response: response.response, data: response.data, result: .success(decodedObject), timeline: response.timeline))
-                    } else {
-                        // Error handeled from server
-                        let serverError = ResponseError(response: decodedObject)
-                        completionHandler(DataResponse(request: response.request, response: response.response, data: response.data, result: .failure(serverError), timeline: response.timeline))
-                    }
+                  completionHandler(DataResponse(request: response.request, response: response.response, data: response.data, result: .success(decodedObject), timeline: response.timeline))
                 } catch {
                     // Error Decoding the response
                     completionHandler(DataResponse(request: response.request, response: response.response, data: response.data, result: .failure(error), timeline: response.timeline))

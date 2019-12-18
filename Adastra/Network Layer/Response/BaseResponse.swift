@@ -8,13 +8,15 @@
 
 import Foundation
 public protocol BaseResponseProtocol: Codable {
-    var status: Int? {get set}
-    var message: String? {get set}
+    var request_hash: String? {get set}
+    var request_cached: Bool? {get set}
+    var request_cache_expiry: Int? {get set}
+   
     
 }
 class BaseResponse<T: Codable>: BaseResponseProtocol{
-    var status: Int?
-    var message: String?
-    var totalCount: Int?
-    var result: T?
+    var request_hash: String?
+    var request_cached: Bool?
+    var request_cache_expiry: Int?
+    var articles: Array<T>?
 }

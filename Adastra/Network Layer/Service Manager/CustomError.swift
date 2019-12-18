@@ -23,7 +23,7 @@ extension ReasonableError{
 struct ResponseError:ReasonableError {
     let reason: String
     init(response: BaseResponseProtocol) {
-        self.reason = response.message ?? ""
+        self.reason = response.request_hash ?? ""
     }
 }
 struct ServiceError: ReasonableError {
