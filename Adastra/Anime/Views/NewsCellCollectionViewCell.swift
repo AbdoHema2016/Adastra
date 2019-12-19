@@ -10,14 +10,21 @@ import UIKit
 import Kingfisher
 class NewsCellCollectionViewCell: BaseCollectionViewCell {
 
+    //MARK: - Outlets
     @IBOutlet weak var imgArticleImage: UIImageView!
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblDetail: UILabel!
+
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        imgArticleImage.roundCorners(corners: [.topLeft, .topRight], radius: 3.0)
+    }
     
     override func configure(with model: Model) {
         if let article = model as? Article {
             lblTitle.text = article.title
-            imgArticleImage.kf.setImage(with: URL(string: article.image_url ?? ""), placeholder: #imageLiteral(resourceName: "tutorial_icon"))
+            imgArticleImage.kf.setImage(with: URL(string: article.image_url ?? ""))
             lblDetail.text = article.intro
         }
   }

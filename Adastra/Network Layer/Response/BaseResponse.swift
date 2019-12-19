@@ -14,7 +14,7 @@ public protocol BaseResponseProtocol: Codable {
    
     
 }
-class BaseResponse<T: Codable>: BaseResponseProtocol{
+class ArticleResponse<T: Codable>: BaseResponseProtocol{
     var request_hash: String?
     var request_cached: Bool?
     var request_cache_expiry: Int?

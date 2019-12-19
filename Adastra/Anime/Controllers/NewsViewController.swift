@@ -10,15 +10,17 @@ import UIKit
 
 class NewsViewController: BaseViewController {
     
+    //Mark: - outlets
     @IBOutlet weak var collectionView: UICollectionView!
    
     
-    // MARK: - View Model
+    //MARK: - View Model
     var newsViewModel: NewsViewModel {
         if let viewModel = viewModel as? NewsViewModel { return viewModel }
         fatalError("can not convert value of type 'viewModel' to expected type 'NewsViewModel'.")
     }
     
+    //MARK: - View lifeCycle and initiation
     override func initDependancies() {
         if viewModel == nil {
             setViewModel(NewsViewModel())
@@ -38,16 +40,29 @@ class NewsViewController: BaseViewController {
     override func registerNib() {
         collectionView?.registerCell(withCellType: NewsCellCollectionViewCell.self)
     }
-    func displayNews() {
-        collectionView.reloadData()
-        
-    }
     override func setupView() {
         super.setupView()
         collectionView.delegate = self
         collectionView.dataSource = self
+        setupViewNavBar()
 
     }
+    
+    func setupViewNavBar(){
+        
+        self.navigationController?.navigationBar.layer.masksToBounds = false
+        self.navigationController?.navigationBar.layer.shadowColor = UIColor.lightGray.cgColor
+        self.navigationController?.navigationBar.layer.shadowOpacity = 0.8
+        self.navigationController?.navigationBar.layer.shadowOffset = CGSize(width: 0, height: 2.0)
+        self.navigationController?.navigationBar.layer.shadowRadius = 2
+    }
+    
+    
+    //Mark: - Actions
+    func displayNews() {
+        collectionView.reloadData()
+    }
+    
     func openArticle(article: Article){
         print(article.intro)
        

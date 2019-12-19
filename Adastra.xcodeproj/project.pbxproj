@@ -29,12 +29,12 @@
 		947FCE8023AA6B2300671D8E /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947FCE7F23AA6B2300671D8E /* NewsViewModel.swift */; };
 		947FCE8223AA6C2100671D8E /* AnimeNewsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947FCE8123AA6C2100671D8E /* AnimeNewsRequest.swift */; };
 		947FCE8423AA6C5900671D8E /* APIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947FCE8323AA6C5900671D8E /* APIs.swift */; };
-		947FCE8623AA6DE100671D8E /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947FCE8523AA6DE100671D8E /* News.swift */; };
 		947FCE8923AA6E6400671D8E /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947FCE8823AA6E6400671D8E /* Article.swift */; };
 		947FCE8C23AA729700671D8E /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947FCE8B23AA729700671D8E /* NewsViewController.swift */; };
 		947FCE8E23AA732100671D8E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947FCE8D23AA732100671D8E /* BaseViewController.swift */; };
 		947FCE9323AA8B8B00671D8E /* NewsCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947FCE9123AA8B8B00671D8E /* NewsCellCollectionViewCell.swift */; };
 		947FCE9423AA8B8B00671D8E /* NewsCellCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 947FCE9223AA8B8B00671D8E /* NewsCellCollectionViewCell.xib */; };
+		94BDF7F523AB5DE700F10EDC /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BDF7F423AB5DE700F10EDC /* UIView+Extensions.swift */; };
 		9D77DA3AAA2AE88A797530F8 /* Pods_Adastra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF29E33E3F17B1A1209C8CC7 /* Pods_Adastra.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,12 +63,12 @@
 		947FCE7F23AA6B2300671D8E /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
 		947FCE8123AA6C2100671D8E /* AnimeNewsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeNewsRequest.swift; sourceTree = "<group>"; };
 		947FCE8323AA6C5900671D8E /* APIs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIs.swift; sourceTree = "<group>"; };
-		947FCE8523AA6DE100671D8E /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		947FCE8823AA6E6400671D8E /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		947FCE8B23AA729700671D8E /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		947FCE8D23AA732100671D8E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		947FCE9123AA8B8B00671D8E /* NewsCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		947FCE9223AA8B8B00671D8E /* NewsCellCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCellCollectionViewCell.xib; sourceTree = "<group>"; };
+		94BDF7F423AB5DE700F10EDC /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		AF29E33E3F17B1A1209C8CC7 /* Pods_Adastra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Adastra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF59BF84E1762B442BAE0E97 /* Pods-Adastra.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Adastra.release.xcconfig"; path = "Target Support Files/Pods-Adastra/Pods-Adastra.release.xcconfig"; sourceTree = "<group>"; };
 		F9EA540FEA090F91947BB400 /* Pods-Adastra.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Adastra.debug.xcconfig"; path = "Target Support Files/Pods-Adastra/Pods-Adastra.debug.xcconfig"; sourceTree = "<group>"; };
@@ -163,6 +163,7 @@
 			children = (
 				947FCE6123AA61CB00671D8E /* UICollectionViewCellExtension.swift */,
 				947FCE6323AA61CB00671D8E /* UICollectionViewExtension.swift */,
+				94BDF7F423AB5DE700F10EDC /* UIView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -228,7 +229,6 @@
 		947FCE8723AA6DEC00671D8E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				947FCE8523AA6DE100671D8E /* News.swift */,
 				947FCE8823AA6E6400671D8E /* Article.swift */,
 			);
 			path = Models;
@@ -379,12 +379,12 @@
 			files = (
 				947FCE7523AA626000671D8E /* AlamofireExtensions.swift in Sources */,
 				947FCE7323AA626000671D8E /* BaseResponse.swift in Sources */,
+				94BDF7F523AB5DE700F10EDC /* UIView+Extensions.swift in Sources */,
 				947FCE7723AA626000671D8E /* CustomError.swift in Sources */,
 				947FCE7623AA626000671D8E /* APIFetcher.swift in Sources */,
 				947FCE8923AA6E6400671D8E /* Article.swift in Sources */,
 				947FCE5923AA60FC00671D8E /* Model.swift in Sources */,
 				947FCE5B23AA60FC00671D8E /* BaseCollectionReusableView.swift in Sources */,
-				947FCE8623AA6DE100671D8E /* News.swift in Sources */,
 				947FCE6523AA61CB00671D8E /* UICollectionViewCellExtension.swift in Sources */,
 				947FCE8223AA6C2100671D8E /* AnimeNewsRequest.swift in Sources */,
 				947FCE8023AA6B2300671D8E /* NewsViewModel.swift in Sources */,

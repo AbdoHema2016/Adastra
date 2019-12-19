@@ -11,17 +11,11 @@ import Alamofire
 class NewsViewModel: ViewModel {
     var articles: [Article] = []
     func getNews(onSuccess: (() -> Void)?, onFailure: ((String) -> Void)?) {
-    
-
-        
-        
         let request = AnimeNewsRequest(url: APIs.News.path)
         let aPIFetcher = APIFetcher()
-        aPIFetcher.fetch(request: request, mappingInResponse: BaseResponse<Article>.self, onSuccess: { (response) in
+        aPIFetcher.fetch(request: request, mappingInResponse: ArticleResponse<Article>.self, onSuccess: { (response) in
             if let article = response.articles {
-                //self.articles = article
                 self.articles.append(contentsOf: article)
-
                 onSuccess?()
             } else {
                onFailure?("Error")
